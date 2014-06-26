@@ -4,6 +4,10 @@
     "screenshot":"verbier.png",
     "templateType":"standard",
     "pageTypes": ["home"],
+    "images":[
+        "images/image-1.jpg",
+        "images/image-2.jpg"
+     ],
     "tags": {
     "en": ["clean", "menu", "ecommerce", "shop"],
     "es": ["limpio", "menú", "ecommerce", "tienda"],

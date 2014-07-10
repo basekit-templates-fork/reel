@@ -57,6 +57,9 @@
 		@media @tablet {
 			width: 90%;
 		}
+		@media @mobile {
+			width: 80%;
+		}
 	}
 	.widget.extendednavigation {
 		width: 50%;
@@ -114,6 +117,7 @@
 	&.logo {
 		vertical-align: text-bottom;
 		img {
+			max-width: 100%;
 			vertical-align: top;
 		}
 	}
@@ -807,11 +811,11 @@ input {
 	}
 }
 
-button:hover, button.btn:hover, .widget.tweet a:hover, .widget.button.paypal:hover, .widget.blogsearch button:hover, .widget.ecomproduct .ecom-product .btn:hover, .widget.ecombasket .ecombasket-pull:hover {
+button:hover, button.btn:hover, .widget.tweet a:hover, .widget.button.paypal:hover, .widget.blogsearch button:hover, .widget.ecomproduct .ecom-product .btn:hover, .widget.ecombasket .ecombasket-pull:hover, .widget.clicktocall a:hover, .ecom-product-go-to-checkout-btn:hover {
 	.transition(all, 0.5s, ease);
 }
 
-input, .widget.profile form fieldset input, .widget.tweet a, .widget.ecombasket .ecombasket-pull, .widget.paypalbuynow .widget.button.paypal, button {
+input, .widget.profile form fieldset input, .widget.tweet a, .widget.ecombasket .ecombasket-pull, .widget.paypalbuynow .widget.button.paypal, .widget.clicktocall a, .ecom-product-go-to-checkout-btn, button {
 	.border-radius(4px);
 	line-height: 25px;
 	height: 50px;
@@ -839,6 +843,9 @@ textarea {
 }
 
 .widget {
+	&.clicktocall a, &.clicktocall a:hover {
+		padding: 15px 10px 15px 38px;
+	}
     &.contactform {
     	label {
     		font-family: @font-swatch3-font-family;
@@ -925,6 +932,12 @@ textarea {
     }
 }
 
+.ecom-product-go-to-checkout-btn {
+	font-family: @font-swatch7-font-family;
+	font-size: @font-swatch7-font-size;
+	line-height: @font-swatch7-line-height;
+}
+
 /* 11. Misc Elements */
 
 h5 {
@@ -949,6 +962,28 @@ hr.line {
 		-moz-border-radius: 100px;
 		-webkit-border-radius: 100px;
 		border-radius: 100px;
+		margin-bottom: 1.5em;
+		width: auto;
+	}
+	.twitter-profile-pic, .twitter-content {
+		display: block;
+	}
+	.twitter-profile-pic {
+		float: left;
+		margin-right: 3%;
+		width: auto;
+		@media @mobile {
+			margin-right: 5%;
+		}
+	}
+	.twitter-content {
+		margin-left: -4px;
+		width: 100%;
+		vertical-align: top;
+		@media @mobile {
+			display: block;
+			margin-left: 0;
+		}
 	}
 	span.bk-full-name {
 		color: @font-swatch3-color;
@@ -994,8 +1029,12 @@ hr.line {
 }
 
 .widget.profile .bk-profile-socialicons span a {
+	background: transparent;
 	height: 45px;
 	width: 45px;
+	&:hover {
+		background: transparent;
+	}
 }
 
 .bk-socialicons-linkedin {

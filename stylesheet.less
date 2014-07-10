@@ -935,7 +935,13 @@ textarea {
 .ecom-product-go-to-checkout-btn {
 	font-family: @font-swatch7-font-family;
 	font-size: @font-swatch7-font-size;
+	fot-weight: @gont-swatch7-font-weight;
 	line-height: @font-swatch7-line-height;
+	padding: 10px 15px;
+	&:hover {
+		background-color: @font-swatch7-background-color;
+		text-decoration: none;
+	}
 }
 
 /* 11. Misc Elements */
@@ -1028,13 +1034,8 @@ hr.line {
 	}
 }
 
-.widget.profile .bk-profile-socialicons span a {
+footer.widget.profile .bk-profile-socialicons span a, footer.widget.profile .bk-profile-socialicons span a:hover {
 	background: transparent;
-	height: 45px;
-	width: 45px;
-	&:hover {
-		background: transparent;
-	}
 }
 
 .bk-socialicons-linkedin {

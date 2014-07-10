@@ -122,7 +122,7 @@
 		}
 	}
 	&.responsiveslideshow {
-		background-color: gainsboro;
+		background-color: transparent;
 		margin-top: 20px;
 		.slideshow-widget-wrapper {
 		}
@@ -317,6 +317,10 @@
 
 /* 4. Feature */
 
+.widget.feature {
+	min-height: 450px;
+}
+
 .widget.feature .feature-bgimg .content {
 	background-color: fade(black, 40%);
 	padding: 0 40px;
@@ -466,6 +470,9 @@
 
 .blog-post-list {
     color: @color-swatch4;
+    .blog-post-item {
+    	margin: 1.5em 0;
+    }
     h2 {
     	font-size: bkscale(@font-swatch2-font-size, 0.90);
     	a {
@@ -656,7 +663,7 @@
 		}
 	}
 	.ecom-productslist-image-wrap {
-		background-position: center left;
+		background-position: center center;
 		margin-bottom: 20px;
 	}
 	.ecom-productlist-info {
@@ -779,9 +786,6 @@
 	padding-bottom: 25px;
 }
 
-
-
-
 /* 10. Forms */
 
 input, textarea {
@@ -855,9 +859,10 @@ textarea {
     &.profile {
         form {
             button {
+            	padding: 10px 15px;
                 position: relative;
                 left: -4px;
-                top: 2px;
+                top: 1px;
             }
             fieldset input {
                 border: 1px solid darken(@color-swatch7, 2%);

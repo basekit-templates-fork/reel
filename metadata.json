@@ -5,12 +5,10 @@
     "templateType":"standard",
     "pageTypes": ["home"],
     "images":[
-        "images/1.jpg",
-     ],
+        "images/image-1.jpg"
+    ],
     "tags": {
-    "en": ["clean", "menu", "ecommerce", "shop"],
-    "es": ["limpio", "menú", "ecommerce", "tienda"],
-    "br": ["limpo", "menu", "ecommerce", "loja"]
+    "en": ["clean", "minimal"]
     },
     "colorSwatches":
     {

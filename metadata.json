@@ -5,8 +5,7 @@
     "templateType":"standard",
     "pageTypes": ["home"],
     "images":[
-        "images/image-1.jpg",
-        "images/image-2.jpg"
+        "images/1.jpg",
      ],
     "tags": {
     "en": ["clean", "menu", "ecommerce", "shop"],

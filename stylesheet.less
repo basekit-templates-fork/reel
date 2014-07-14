@@ -73,7 +73,11 @@
 	.widget.profile {
 		width: 18%;
 		@media @tablet {
-			display: none;
+			border-top: 1px solid lighten(@color-swatch5, 50%);
+			border-bottom: 1px solid lighten(@color-swatch5, 50%);
+			display: block;
+			padding: 1.5em 0;
+			width: 100%;
 		}
 	}
 }
@@ -144,7 +148,7 @@
 		}
 		.content-wrapper {
 			background-color: fade(@color-swatch1, 75%);
-			bottom: 15px;
+			bottom: initial;
 			display: inline-block;
 			min-height: 50px;
 			height: auto;
@@ -152,9 +156,9 @@
 			left: 15px;
 			right: auto;
 			max-width: 80%;
+			top: 15px;
 			@media @mobile {
 				display: block;
-				bottom: initial;
 				height: initial;
 				top: 0;
 			}
@@ -269,6 +273,11 @@
 		  		float: none;
 		  		width: 100%;
 		  	}
+		  	&:last-child {
+		  		@media @tablet {
+		  			border-bottom: none;
+		  		}
+		  	}
 		  	a, span.text {
 		  		@media @tablet {
 		  			padding: 0 20px 0 0;
@@ -277,7 +286,7 @@
 		  	&:hover ul {
 		  		border: 1px solid lighten(@color-swatch5, 50%);
 		  		.border-radius(4px);
-		  		margin-left: 20px;
+		  		margin-left: 15px;
 		  		min-width: 80px;
 		  		top: 25px;
 		  		width: auto;
@@ -615,6 +624,9 @@
             
         }
     }
+    .menu-subsection-promoted .menu-items li.menu-item-promoted {
+    	background-color: lighten(@color-swatch5, 52%);
+    }
     .menu-subsection-name {
         color: @font-swatch2-color;
         margin-bottom: 0.25em;
@@ -659,7 +671,7 @@
 			button {
 				position: relative;
 				left: -9px;
-				top: 1px;
+				vertical-align: top;
 				.border-radius (@radius: 0 4px 4px 0);
 			}
 		}
@@ -935,7 +947,7 @@ textarea {
 .ecom-product-go-to-checkout-btn {
 	font-family: @font-swatch7-font-family;
 	font-size: @font-swatch7-font-size;
-	fot-weight: @gont-swatch7-font-weight;
+	fot-weight: @font-swatch7-font-weight;
 	line-height: @font-swatch7-line-height;
 	padding: 10px 15px;
 	&:hover {
@@ -968,38 +980,26 @@ hr.line {
 		-moz-border-radius: 100px;
 		-webkit-border-radius: 100px;
 		border-radius: 100px;
-		margin-bottom: 1.5em;
-		width: auto;
 	}
+	p
 	.twitter-profile-pic, .twitter-content {
 		display: block;
 	}
 	.twitter-profile-pic {
-		float: left;
-		margin-right: 3%;
-		width: auto;
 		@media @mobile {
-			margin-right: 5%;
+			margin-right: 0;
+			width: 100%;
 		}
 	}
 	.twitter-content {
-		margin-left: -4px;
-		width: 100%;
-		vertical-align: top;
-		@media @mobile {
-			display: block;
-			margin-left: 0;
-		}
+		float: left
 	}
-	span.bk-full-name {
+	span.bk-full-name, a, p a, span, a .bk-full-name {
 		color: @font-swatch3-color;
-		display: block;
 		font-family: @font-swatch3-font-family;
 		font-size: @font-swatch3-font-size;
 		font-weight: @font-swatch3-font-weight;
 		line-height: @font-swatch3-line-height;
-		margin-top: 3px;
-		margin-bottom: 5px;
 	}
 	time, span, span a {
 		color: @color-swatch3;
@@ -1007,6 +1007,9 @@ hr.line {
 		font-size: bkscale(@font-swatch5-font-size, 0.9);
 		font-weight: @font-swatch5-font-weight;
 		line-height: @font-swatch5-line-height;
+	}
+	time {
+		display: none;
 	}
 }
 

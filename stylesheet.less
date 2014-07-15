@@ -83,38 +83,41 @@
 }
 
 .widget .extendednavigation a.pull {
-		background-color: @color-swatch3;
-		.border-radius(4px);
-		padding: 11px 9px 0;
+	background-color: @color-swatch3;
+	.border-radius(4px);
+	padding: 11px 9px 0;
+	position: absolute;
+	top: -60px; 
+	width: 42px;
+	height: 38px;
+	overflow: hidden;
+	cursor: pointer;
+	outline: none;
+	.transition( all, 0.5s, ease );
+    &:hover {
+    	border-color: 2px solid @font-swatch7-background-color-hover;
+    	.transition( all, 0.5s, ease);
+    	&:after {
+    		background: @color-swatch1;
+			box-shadow: 0 6px 0 white, 0 12px 0 white;
+			.transition( all, 0.5s, ease);
+    	}
+    }
+	&:after {
+		content: '';
 		position: absolute;
-		top: -60px; 
-		width: 42px;
-		height: 38px;
-		text-indent: -900em;
-		overflow: hidden;
-		cursor: pointer;
-		outline: none;
-		.transition( all, 0.5s, ease);
-	    &:hover {
-	    	border-color: 2px solid @font-swatch7-background-color-hover;
-	    	.transition( all, 0.5s, ease);
-	    	&:after {
-	    		background: @color-swatch1;
-				box-shadow: 0 6px 0 white, 0 12px 0 white;
-				.transition( all, 0.5s, ease);
-	    	}
-	    }
-		&:after {
-			content: '';
-			position: absolute;
-			width: 22px;
-			height: 2px;
-			background: @color-swatch1;
-			box-shadow: 0 6px 0 @color-swatch1, 0 12px 0 @color-swatch1;
-			top: 12px;
-			left: 10px;
-		}
+		width: 22px;
+		height: 2px;
+		background: @color-swatch1;
+		box-shadow: 0 6px 0 @color-swatch1, 0 12px 0 @color-swatch1;
+		top: 12px;
+		left: 10px;
 	}
+}
+
+.widget.extendednavigation .bk-overlay {
+	top: -60px!important;
+}
 
 .widget {
 	margin-bottom: 10px;
@@ -148,7 +151,7 @@
 		}
 		.content-wrapper {
 			background-color: fade(@color-swatch1, 75%);
-			bottom: initial;
+			top: initial;
 			display: inline-block;
 			min-height: 50px;
 			height: auto;
@@ -156,7 +159,7 @@
 			left: 15px;
 			right: auto;
 			max-width: 80%;
-			top: 15px;
+			bottom: 15px;
 			@media @mobile {
 				display: block;
 				height: initial;
@@ -203,13 +206,13 @@
 			}
 			.btn-prev, .btn-next {
 				background-color: fade(@color-swatch1, 65%);
-				bottom: 15px;
+				top: 15px;
 				font-family: @font-swatch7-font-family;
 				font-size: bkscale(@font-swatch3-font-size, 1.4);
 				font-weight: @font-swatch5-font-weight;
 				height: 50px;
 				width: 55px;
-				top: inherit;
+				bottom: inherit;
 				text-indent: 1000px;
 				overflow: hidden;
 				.transition(all .5s ease);
@@ -983,7 +986,7 @@ hr.line {
 	}
 	p
 	.twitter-profile-pic, .twitter-content {
-		display: block;
+		display: inline-block;
 	}
 	.twitter-profile-pic {
 		@media @mobile {
@@ -992,7 +995,11 @@ hr.line {
 		}
 	}
 	.twitter-content {
-		float: left
+		float: left;
+		width: 85%;
+		@media @mobile {
+			width: 100%;
+		}
 	}
 	span.bk-full-name, a, p a, span, a .bk-full-name {
 		color: @font-swatch3-color;

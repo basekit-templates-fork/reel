@@ -85,35 +85,32 @@
 }
 
 .widget .extendednavigation a.pull {
-	background-color: @color-swatch3;
-	.border-radius(4px);
 	padding: 11px 9px 0;
 	position: absolute;
-	top: -65px; 
+	top: -50px; 
 	width: 42px;
 	height: 38px;
 	overflow: hidden;
 	cursor: pointer;
 	outline: none;
 	.transition( all, 0.5s, ease );
-    &:hover {
-    	border-color: 2px solid @font-swatch7-background-color-hover;
+    &:hover { 
     	.transition( all, 0.5s, ease);
     	&:after {
-    		background: @color-swatch1;
-			box-shadow: 0 6px 0 white, 0 12px 0 white;
+    		background: darken(#c7c7c7, 10%);
+			box-shadow: 0 7px 0 darken(#c7c7c7, 10%), 0 14px 0 darken(#c7c7c7, 10%);
 			.transition( all, 0.5s, ease);
     	}
     }
 	&:after {
 		content: '';
 		position: absolute;
-		width: 22px;
-		height: 2px;
-		background: @color-swatch1;
-		box-shadow: 0 6px 0 @color-swatch1, 0 12px 0 @color-swatch1;
-		top: 12px;
-		left: 10px;
+		width: 28px;
+		height: 3px;
+		background: #c7c7c7;
+		box-shadow: 0 7px 0 #c7c7c7, 0 14px 0 #c7c7c7;
+		top: 15px;
+		left: 12px;
 	}
 }
 
@@ -1049,7 +1046,7 @@ hr.line {
 }
 
 .bk-footer .widget.profile .bk-profile-socialicons span a, .bk-footer .widget.profile .bk-profile-socialicons span a:hover {
-	background: @color-swatch1;
+	background-color: transparent;
 }
 
 .bk-socialicons-linkedin {

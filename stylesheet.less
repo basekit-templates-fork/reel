@@ -45,6 +45,7 @@
 	.contain {
 		padding-top: 55px;
 		@media @tablet {
+			padding-top: 45px;
 			padding-bottom: 10px;
 		}
 	}
@@ -76,7 +77,8 @@
 			border-top: 1px solid lighten(@color-swatch5, 50%);
 			border-bottom: 1px solid lighten(@color-swatch5, 50%);
 			display: block;
-			padding: 1.5em 0;
+			padding: 1.5em 0 1em;
+			margin-bottom: 2em;
 			width: 100%;
 		}
 	}
@@ -444,7 +446,7 @@
 .bk-footer {
 	.copyright {
 		.contain {
-			border-top: 1px solid lighten(@color-swatch5, 68%);
+			border-top: 1px solid lighten(@color-swatch5, 50%);
 			padding: 12px 40px;
 		}
 		.widget.profile {
@@ -453,6 +455,9 @@
 			color: @font-swatch5-color;
 			padding: 30px 0;
 			text-align: center;
+			@media @mobile {
+				padding: 15px 0;
+			}
 		}
 	}
 }
@@ -1043,8 +1048,8 @@ hr.line {
 	}
 }
 
-footer .widget.profile .bk-profile-socialicons span a, footer .widget.profile .bk-profile-socialicons span a:hover {
-	background: transparent;
+.bk-footer .widget.profile .bk-profile-socialicons span a, .bk-footer .widget.profile .bk-profile-socialicons span a:hover {
+	background: @color-swatch1;
 }
 
 .bk-socialicons-linkedin {

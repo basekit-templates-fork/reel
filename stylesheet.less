@@ -422,19 +422,35 @@
 	}
 }
 
-#main {
-	padding-top: 100px;
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    overflow: scroll;
-    background: #fcfeff;
-    border-radius: 0;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+div[role="main"] {
+    .widget.responsiveslideshow {
+		.content-wrapper {
+			max-width: 100%;
+		}
+		.slideshow-widget {
+			.btn-prev {
+				left: 15px;
+				top: 45%;
+				&:before {
+					content: "\003c";
+				}
+				@media @mobile {
+					top: 42%;
+				}
+			}
+			.btn-next {
+				right: 15px;
+				top: 45%;
+				&:before {
+					content: "\003e";
+				}
+				@media @mobile {
+					left: inherit;
+					top: 42%;
+				}
+			}
+		}
+	}
 }
 
 /* 6. Footer */

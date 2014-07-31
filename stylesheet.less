@@ -135,7 +135,6 @@
 		}
 	}
 	&.responsiveslideshow {
-		background-color: transparent;
 		margin-top: 20px;
 		.slideshow-widget-wrapper {
 		}
@@ -655,31 +654,6 @@
 }
 
 .widget.ecomproductslist, .ecomfeaturedproducts  {
-	.productlist-display-form {
-		.form-group {
-			input.productlist-search, input.productlist-search + button.btn {
-				.border-radius (@radius: 0 4px 4px 0);
-				margin-right: 0;
-				height: 45px;
-			}
-			input.productlist-search {
-				@media @mobile {
-					width: 65%;
-				}
-			}
-			label:after {
-				content: ":";
-				display: inline-block;
-				position: relative;
-			}
-			button {
-				position: relative;
-				left: -9px;
-				vertical-align: top;
-				.border-radius (@radius: 0 4px 4px 0);
-			}
-		}
-	}
 	.ecom-productslist-product {
 		a:hover {
 			text-decoration: none;
@@ -703,32 +677,133 @@
 	}
 }
 
-.productlist-display-form, .productlist-item-count, .widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation { 
-    select {
-    	.border-radius(4px);
-    	color: lighten(@font-swatch5-color, 15%);
-        font-size: bkscale(@font-swatch7-font-size, 0.85);
-        height: 50px;
-        margin-left: 6px;
-        -webkit-appearance: none;
-		border: 1px solid darken(@color-swatch7, 2%);
-        padding: 4px 35px 4px 12px;
-        background: image('/images/arrow-dropdown.png') 95% center no-repeat, @color-swatch7;
-        @media @tablet {
-        	background-position: 98% center;
-        	margin-left: 0;
-            width: 100%;
-        }
+.productlist-filter {
+   margin: 0 auto;
+  .form-group {
+    width: 25%;
+     box-sizing: border-box;
+  }
+}
+
+.productlist-display-form .form-group {
+  padding: 10px;
+  margin: 0;
+  float: left;
+  &:first-child {
+    padding-left: 0;
+  }
+  &:last-child {
+    padding-right: 0;
+  }
+}
+
+.widget.ecomproductslist .productlist-filter .productlist-display-form .form-group {
+  margin-right: 0;
+}
+
+.form-group.productlist-search:before {
+  content: "Search";
+  display: inline-block;
+  padding-bottom: .4em;
+}
+
+.form-group.productlist-search {
+  position: relative;
+  input[type=search] {
+  	font-size: @font-swatch6-font-size;
+    padding-right: 0;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  button {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+  }
+}
+
+.ecom-product-go-to-checkout-btn {
+  font-family: @font-swatch7-font-family;
+  line-height: 50px;
+  padding: 0;
+  margin: 0;
+  min-height: 50px;
+  font-size: @font-swatch7-font-size;
+  font-weight: @font-swatch7-font-weight;
+  -webkit-font-smoothing: inherit;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+button.btn {
+  line-height: 24px;
+  font-size: 14px;
+  padding: 8px 14px;
+  display: inline-block;
+  cursor: pointer;
+  margin: 0;
+}
+
+label {
+  display: inline-block;
+  padding-bottom: .4em;
+}
+
+select {
+  background-color: @color-swatch7;
+  border: 1px solid darken(@color-swatch7, 3%);
+  color: @font-swatch5-color;
+  line-height: 20px;
+  font-family: @font-swatch6-font-family;
+  font-size: 13px;
+  text-indent: 0;
+  width: 100%;
+  padding: 14px 10px 10px;
+  outline: none;
+  -webkit-transition: border .2s;
+  -moz-transition: border .2s;
+  -ms-transition: border .2s;
+  transition: border .2s;
+  border-radius: 0;
+  height: 50px;
+}
+
+.productlist-item-count {
+  clear: both;
+}
+
+@media (max-width: 768px) {
+  .productlist-display-form {
+    label {
+      display: inline-block;
+      width: 19%;
     }
+    select {
+      width: 80%;
+    }
+  }
+  .productlist-display-form .form-group {
+    float: none;
+    width: 100%;
+    padding: 0;
+
+  } 
+  .form-group.productlist-search button {
+    bottom: 0;
+    width: 20%;
+  }
+
 }
 
-.widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation select {
-	margin-left: 0;
+@media (max-width: 480px) {
+  .productlist-display-form {
+    select, label {
+      width: 100%;
+    }
+  }
 }
 
-.ecom-featuredproducts-.widget.ecomfeaturedproducts .ecom-featuredproducts-wrap .ecom-featuredproducts-product .ecom-featuredproducts-image-wrapheader {
-	background-position: left center;
-}
 
 .widget.ecomproduct {
 	h2 {
@@ -768,11 +843,12 @@
 	select {
 		color: lighten(@font-swatch5-color, 15%);
 	    font-size: bkscale(@font-swatch7-font-size, 0.85);
+	    font-family: @font-swatch6-font-family;
 	    -webkit-border-radius: 0;
 	    border-radius: 0;
 	    height: 50px;
 	    -webkit-appearance: none;
-		border: 1px solid darken(@color-swatch7, 2%);
+		border: 1px solid darken(@color-swatch7, 3%);
 		text-indent: 8px;;
 	    padding: 4px 35px 4px 12px;
 	}
@@ -813,7 +889,7 @@
 
 input, textarea {
 	background-color: @color-swatch7;
-	border: 1px solid darken(@color-swatch7, 2%);
+	border: 1px solid darken(@color-swatch7, 3%);
 	text-indent: 8px;
 	&:hover, &:focus {
 		border: 1px solid darken(@color-swatch7, 10%)!important;
@@ -833,7 +909,7 @@ button:hover, button.btn:hover, .widget.tweet a:hover, .widget.button.paypal:hov
 
 input, .widget.profile form fieldset input, .widget.tweet a, .widget.ecombasket .ecombasket-pull, .widget.paypalbuynow .widget.button.paypal, .widget.clicktocall a, .ecom-product-go-to-checkout-btn, button {
 	.border-radius(4px);
-	line-height: 25px;
+	line-height: 50px;
 	height: 50px;
 }
 
@@ -871,7 +947,7 @@ textarea {
     		margin: 16px 0 8px;
     	}
         input, textarea {
-            border: 1px solid darken(@color-swatch7, 2%);
+            border: 1px solid darken(@color-swatch7, 3%);
             &.email {
                 @media @mobile {
                     width: 70%;
@@ -891,7 +967,7 @@ textarea {
                 top: 1px;
             }
             fieldset input {
-                border: 1px solid darken(@color-swatch7, 2%);
+                border: 1px solid darken(@color-swatch7, 3%);
                 @media @mobile {
                 	width: 65%;
                 }
@@ -905,7 +981,7 @@ textarea {
             top: 2px;
         }
         input {
-            border: 1px solid darken(@color-swatch7, 2%);
+            border: 1px solid darken(@color-swatch7, 3%);
             height: 50px;
             width: 50%;
             @media @tablet {
@@ -919,7 +995,7 @@ textarea {
     &.blogsearch {
         margin: 10px 0;
         input {
-            border: 1px solid darken(@color-swatch7, 2%);
+            border: 1px solid darken(@color-swatch7, 3%);
             width: 65%;
         }
         button {

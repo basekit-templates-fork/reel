@@ -694,46 +694,40 @@ div[role="main"] {
 }
 
 .productlist-filter {
-   margin: 0 auto;
-  .form-group {
-    width: 25%;
-     box-sizing: border-box;
-  }
-}
-
-.productlist-display-form .form-group {
-  padding: 10px;
-  margin: 0;
-  float: left;
-  &:first-child {
-    padding-left: 0;
-  }
-  &:last-child {
-    padding-right: 0;
-  }
-}
-
-.widget.ecomproductslist .productlist-filter .productlist-display-form .form-group {
-  margin-right: 0;
-}
-
-.form-group.productlist-search:before {
-  padding-bottom: .4em;
-}
-
-.form-group.productlist-search {
-  position: relative;
-  input[type=search] {
-  	font-size: bk-scale(@font-swatch6-font-size, 0.85);
-    padding-right: 0;
-    box-sizing: border-box;
-    width: 100%;
-  }
-  button {
-    position: absolute;
-    right: 0;
-    bottom: 10px;
-  }
+    label {
+        display: block;
+        &:last-child {
+            display: none;
+        }
+    }
+    select {
+        height: 45px;
+        line-height: 45px;
+        margin: 0;
+        padding: 8px;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+        border: 1px solid darken(@color-swatch1,10%);
+        background-color: darken(@color-swatch1,4%);
+        text-indent: 0.01px;
+        text-overflow: '';
+        color: darken(@color-swatch5,5%);
+        cursor: pointer;
+        &:focus {
+            outline: 0;
+        }
+        @media only screen and (max-width: 650px) {
+          	margin-left: 0;
+            width: 100%;
+        }
+    }
+    select::-ms-expand {
+        display: none;
+    }
+    select[name="displayCount"] {
+        margin-bottom: 0;
+    }
 }
 
 .ecom-product-go-to-checkout-btn {
@@ -803,11 +797,19 @@ select {
     padding: 0;
 
   } 
-  .form-group.productlist-search button {
-    bottom: 0;
-    width: 20%;
+  .form-group.productlist-search  {
+	label {
+		vertical-align: top;
+	}
+	input {
+		width: 60%;
+	}
+  	button {
+	    margin-left: 1%;
+		width: 18%;
+	    vertical-align: top;
+	}
   }
-
 }
 
 @media (max-width: 480px) {
@@ -815,6 +817,17 @@ select {
     select, label {
       width: 100%;
     }
+  }
+  .form-group.productlist-search  {
+	input {
+		margin-left: -4px;
+		margin-right: 1%;
+		width: 24%;
+	}
+  	button {
+		width: 24%;
+	    vertical-align: top;
+	}
   }
 }
 
@@ -923,7 +936,7 @@ button:hover, button.btn:hover, .widget.tweet a:hover, .widget.button.paypal:hov
 
 input, .widget.profile form fieldset input, .widget.tweet a, .widget.ecombasket .ecombasket-pull, .widget.paypalbuynow .widget.button.paypal, .widget.clicktocall a, .ecom-product-go-to-checkout-btn, button {
 	.border-radius(4px);
-	line-height: 50px;
+	line-height: 25px;
 	height: 50px;
 }
 
@@ -1112,14 +1125,20 @@ hr.line {
 }
 
 .widget.gallery ul li span.inner .title {
-	bottom: -50px;
+	font-weight: @font-swatch3-font-weight;
+	font-size: @font-swatch4-font-size;
+}
+
+.widget.gallery .inner .image-data {
+	display: block;
 	opacity: 0;
 }
 
-.widget.gallery ul li span.inner a:hover .title {
-	bottom: 0;
+.widget.gallery .inner:hover .image-data {
+	.transition( opacity, 0.5s, ease );
 	opacity: 1;
 }
+
 
 .widget.socialicons, .widget.profile .bk-profile-socialicons {
 	margin: 2em 0 1em;

@@ -912,6 +912,229 @@ select {
 	padding-bottom: 25px;
 }
 
+// Basket Summary
+// -----------------------------
+
+.widget.ecombasketsummary {
+    margin-bottom: 30px;
+    // Image Wrap
+    .image-wrap {
+        background-position: -10000%;
+        background-size: contain;
+        img {
+        	min-width: 80%;
+        }
+        @media (max-width: 650px) {
+            img {
+                max-width: 100%!important;
+            }
+        }
+        @media (max-width: 650px) { 
+            max-width: 100%;
+        }
+    }
+    // Product Name, Price, Quantity
+    .basket-summary-pricepu,
+    .basket-summary-quantitybtn,
+    .basket-summary-subtotal,
+    .basket-summary-amount {
+        font-family: @font-swatch4-font-family;
+        font-size: 18px;
+        font-weight: @font-swatch4-font-weight;
+        line-height: @font-swatch4-line-height;
+        letter-spacing: @font-swatch4-letter-spacing;
+        color: @font-swatch4-color;
+    }
+    .basket-summary-pricepu {
+    	font-size: bkscale(@font-swatch3-font-size, 1.03);
+    }
+    .basket-summary-amount {
+    	color: @color-swatch3;
+    	font-size: bkscale(@font-swatch3-font-size, 1.05);
+    	font-wieght: @font-swatch3-font-weight;
+    }
+    // Product Name
+    .basket-summary-productname {
+        display: block;
+        font-family: @font-swatch3-font-family;
+        font-size: bkscale(@font-swatch3-font-size, 1.02);
+        font-weight: @font-swatch3-font-weight;
+        line-height: @font-swatch3-line-height;
+        color: @font-swatch3-color;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    // Quantity
+    .basket-summary-quantity {
+        margin-top: 15px;
+        .basket-summary-quantity-text {
+            display: block;
+            padding: 0;
+            font-family: @font-swatch4-font-family;
+            color: @font-swatch4-color;
+            line-height: 20px;
+            margin-bottom: 6px;
+        }
+        .quantity-number {
+            position: relative;
+            padding: 3px 10px 5px;
+            background-color: darken(@color-swatch1,5%);
+            font-size: 14px;
+            vertical-align: bottom;
+        }
+        button {
+        	.border-radius(4px);
+            width: 25px;
+            height: 25px;
+            padding: 0;
+            margin: 0;
+            border: 0;
+            box-shadow: none;
+            background-color: @color-swatch3;
+            font-size: 12px;
+            font-family: @font-swatch4-font-family;
+            color: @color-swatch1;
+            &:hover {
+                background-color: @font-swatch7-background-color-hover;
+                cursor: pointer;
+            }
+            &:focus {
+                outline: none;
+            }
+        }
+    }   
+    // Table
+    table {
+        margin: 20px 0 30px;
+        border-spacing: 0;
+        border-bottom: 0;
+        width: 100%;
+        @media @mobile {
+        	border: 1px solid darken(@color-swatch1, 8%);
+        }
+        // Heading Row
+        tr.basket-summary-items:hover {
+        	background-color: darken(@color-swatch1, 2%);
+        	.transition(background-color, .5s, ease);
+        	@media @mobile {
+        		background-color: transparent;
+        	}
+        }
+        tr:first-child {
+            outline: 1px solid darken(@color-swatch1,8%);
+            background-color: darken(@color-swatch1,4%);
+            -webkit-border-top-left-radius: 4px;
+            -webkit-border-top-right-radius: 4px;
+            -moz-border-radius-topleft: 4px;
+            -moz-border-radius-topright: 4px;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+            font-family: @font-swatch4-font-family;
+            font-size: 12px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            color: @font-swatch4-color;
+            text-transform: uppercase;
+            @media @mobile {
+                font-size: 12px;
+            }
+            th {
+            	padding: 15px 10px 15px 25px;
+                position: relative;
+                text-align: left;
+                &:last-child {
+                    @media (max-width: 650px) {
+                        display: none;
+                    }
+                }
+            }
+        }
+        // Item Row
+        tr td {
+            border-bottom: 1px solid darken(@color-swatch1,8%);
+            @media (max-width: 650px) {
+                display: table;
+                width: 100%;
+                border-bottom: 0;
+            }
+            &:nth-child(1),
+            &:nth-child(2) {
+                padding: 35px 25px;
+                vertical-align: top;
+            }
+            &:nth-child(2) {
+                @media (max-width: 650px) {
+                    padding-left: 0;
+                }
+            }
+            &:nth-child(3) {
+                padding: 20px;
+            }
+            // Responsive
+            &:nth-child(1) {
+                @media (max-width: 650px) {
+                    padding-bottom: 0;
+                }
+            }
+            &:nth-child(2),
+            &:nth-child(3) {
+                @media (max-width: 650px) {
+                    padding: 0 20px 0;
+                    border-left: 0;
+                }
+            }
+            &:last-child {
+                @media (max-width: 650px) {
+                    padding: 12px 20px;
+                    margin: 20px 0 0;
+                    border-bottom: 1px solid darken(@color-swatch1,10%);
+                    border-top: 1px solid darken(@color-swatch1,10%);
+                }
+            }
+        }
+        tr:last-child {
+        	td:nth-child(1), td:nth-child(2) {
+        		padding: 0;
+        	}
+        	td:last-child {
+	            @media (max-width: 650px) {
+	            	border-bottom: 0;
+	                border-top: 0;
+	                margin-top: 0;
+	            }
+        	}
+        }
+    }
+    // Continue to Payment Button
+    .basket-summary-submit {
+    	background-color: @font-swatch7-background-color;
+        margin-bottom: 30px;
+        &:hover {
+        	background-color: @font-swatch7-background-color;
+        	.transition(background-color, .5s, ease);
+        }
+        &:disabled {
+            opacity: 0.5;
+            &:hover {
+                opacity: 0.7;
+                .transition(background-color, .5s, ease);
+            }
+        }
+    }
+    // 
+    .js-shipping-opts {
+        border-bottom: 1px solid darken(@color-swatch1,10%);
+        padding-bottom: 20px;
+        font-size: 14px;
+        line-height: 26px;
+        margin-bottom: 20px;
+        label {
+            margin-bottom: 10px;
+        }
+    }
+}
+
 /* 10. Forms */
 
 input, textarea {
@@ -920,7 +1143,7 @@ input, textarea {
 	text-indent: 8px;
 	&:hover, &:focus {
 		border: 1px solid darken(@color-swatch7, 10%)!important;
-		transition: ease .5s border!important;
+		.transition(border, .5s, ease);
 	}
 }
 
@@ -932,6 +1155,7 @@ input {
 
 button:hover, button.btn:hover, .widget.tweet a:hover, .widget.button.paypal:hover, .widget.blogsearch button:hover, .widget.ecomproduct .ecom-product .btn:hover, .widget.ecombasket .ecombasket-pull:hover, .widget.clicktocall a:hover, .ecom-product-go-to-checkout-btn:hover {
 	.transition(all, 0.5s, ease);
+	background-color: @font-swatch7-background-color;
 }
 
 input, .widget.profile form fieldset input, .widget.tweet a, .widget.ecombasket .ecombasket-pull, .widget.paypalbuynow .widget.button.paypal, .widget.clicktocall a, .ecom-product-go-to-checkout-btn, button {
@@ -950,6 +1174,7 @@ button.blog-search-submit-button, .widget.signupform button, .widget.profile but
 }
 
 .widget.paypalbuynow .widget.button.paypal:hover {
+	background-color: @font-swatch7-background-color;
 	.border-radius(4px);
 	border: none!important;
 	.transition(all, 0.5s, ease);
@@ -1124,21 +1349,31 @@ hr.line {
 	}
 }
 
-.widget.gallery ul li span.inner .title {
-	font-weight: @font-swatch3-font-weight;
-	font-size: @font-swatch4-font-size;
+.widget.gallery ul li span.inner {
+	.title {
+		color: @color-swatch4;
+		font-weight: @font-swatch3-font-weight;
+		font-size: @font-swatch4-font-size;
+	}
+	.description {
+		color: @color-swatch5;
+	}
 }
 
 .widget.gallery .inner .image-data {
+	background: fade(@color-swatch1, 65%);
 	display: block;
 	opacity: 0;
+	height: auto;
+	bottom: 0;
+	position: absolute;
+	width: 100%;
 }
 
 .widget.gallery .inner:hover .image-data {
 	.transition( opacity, 0.5s, ease );
 	opacity: 1;
 }
-
 
 .widget.socialicons, .widget.profile .bk-profile-socialicons {
 	margin: 2em 0 1em;

@@ -495,6 +495,10 @@ div[role="main"] {
     }
 }
 
+.blog-post-sharing {
+	margin: 1em 0;
+}
+
 .blog-post-list .blog-post-feature-image-wrap {
     height: 275px;
 }
@@ -799,7 +803,7 @@ select {
   } 
   .form-group.productlist-search  {
 	label {
-		vertical-align: top;
+		vertical-align: middle;
 	}
 	input {
 		width: 60%;
@@ -812,20 +816,23 @@ select {
   }
 }
 
-@media (max-width: 480px) {
+@media @mobile {
   .productlist-display-form {
     select, label {
       width: 100%;
     }
   }
   .form-group.productlist-search  {
-	input {
-		margin-left: -4px;
-		margin-right: 1%;
-		width: 24%;
-	}
+  	label {
+  		vertical-align: middle;
+  	}
+  	input, button {
+  		display: block;
+  		width: 100%;
+  	}
   	button {
-		width: 24%;
+  		margin-left: 0;
+  		margin-top: 20px;
 	    vertical-align: top;
 	}
   }
@@ -1230,7 +1237,7 @@ textarea {
         button {
             width: 85px;
             position: relative;
-            top: 2px;
+            vertical-align: top;
         }
         input {
             border: 1px solid darken(@color-swatch7, 3%);

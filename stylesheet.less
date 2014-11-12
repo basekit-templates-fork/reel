@@ -681,6 +681,15 @@ div[role="main"] {
 
 /* 9. Ecommerce */
 
+  .form-group.productlist-search  {
+	input {
+		vertical-align: middle;
+	}
+  	button {
+	    vertical-align: middle;
+	}
+  }
+
 .ecom-product-long-description {
 	padding-top: 0.5em;
 }
@@ -733,8 +742,8 @@ div[role="main"] {
         }
     }
     select {
-        height: 45px;
-        line-height: 45px;
+        height: 50px;
+        line-height: 50px;
         margin: 0;
         padding: 8px;
         -webkit-border-radius: 0;
@@ -774,6 +783,10 @@ div[role="main"] {
   &:hover {
     text-decoration: none;
   }
+}
+
+.productlist-display-form .form-group {
+	vertical-align: top;
 }
 
 button.btn {
@@ -835,11 +848,12 @@ select {
 	}
 	input {
 		width: 60%;
+		vertical-align: middle;
 	}
   	button {
 	    margin-left: 1%;
 		width: 18%;
-	    vertical-align: top;
+	    vertical-align: middle;
 	}
   }
 }

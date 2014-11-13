@@ -681,12 +681,6 @@ div[role="main"] {
 
 /* 9. Ecommerce */
 
- 
-
-.ecom-product-long-description {
-	padding-top: 0.5em;
-}
-
 .widget.ecombasket .ecombasket-pull {
 	.border-radius(6px);
 	p {
@@ -735,8 +729,8 @@ div[role="main"] {
         }
     }
     select {
-        height: 50px;
-        line-height: 50px;
+        height: 45px;
+        line-height: 45px;
         margin: 0;
         padding: 8px;
         -webkit-border-radius: 0;
@@ -762,11 +756,6 @@ div[role="main"] {
     select[name="displayCount"] {
         margin-bottom: 0;
     }
-    .form-group.productlist-search  {
-		input, button {
-			vertical-align: middle;
-		}
-  	}
 }
 
 .ecom-product-go-to-checkout-btn {
@@ -781,10 +770,6 @@ div[role="main"] {
   &:hover {
     text-decoration: none;
   }
-}
-
-.productlist-display-form .form-group {
-	vertical-align: top;
 }
 
 button.btn {
@@ -846,12 +831,11 @@ select {
 	}
 	input {
 		width: 60%;
-		vertical-align: middle;
 	}
   	button {
 	    margin-left: 1%;
 		width: 18%;
-	    vertical-align: middle;
+	    vertical-align: top;
 	}
   }
 }
@@ -1259,6 +1243,11 @@ textarea {
     		font-weight: @font-swatch3-font-weight;
     		line-height: @font-swatch3-line-height;
     		margin: 16px 0 8px;
+    	}
+
+    	// Annoying ie11 fix for margin on contact form button
+    	button {
+			margin-top: 10px;
     	}
         input, textarea {
             border: 1px solid darken(@color-swatch7, 3%);

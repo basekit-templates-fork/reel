@@ -769,6 +769,7 @@ div[role="main"] {
   -webkit-font-smoothing: inherit;
   &:hover {
     text-decoration: none;
+    background-color: @font-swatch7-background-color-hover;
   }
 }
 
@@ -779,6 +780,9 @@ button.btn {
   display: inline-block;
   cursor: pointer;
   margin: 0;
+  	&:hover {
+    	background-color: @font-swatch7-background-color-hover;
+    }
 }
 
 label {
@@ -832,12 +836,16 @@ select {
 	input {
 		width: 60%;
 	}
-  	button {
+  	button.btn {
 	    margin-left: 1%;
 		width: 18%;
 	    vertical-align: top;
 	}
   }
+}
+
+.widget.ecomproductslist .productlist-filter .productlist-display-form .form-group button.btn:hover {
+	background-color: @font-swatch7-background-color-hover;
 }
 
 @media @mobile {
@@ -1142,7 +1150,7 @@ select {
     	background-color: @font-swatch7-background-color;
         margin-bottom: 30px;
         &:hover {
-        	background-color: @font-swatch7-background-color;
+        	background-color: @font-swatch7-background-color-hover;
         	.transition(background-color, .5s, ease);
         }
         &:disabled {
@@ -1186,7 +1194,7 @@ input {
 
 button:hover, button.btn:hover, .widget.tweet a:hover, .widget.button.paypal:hover, .widget.blogsearch button:hover, .widget.ecomproduct .ecom-product .btn:hover, .widget.ecombasket .ecombasket-pull:hover, .widget.clicktocall a:hover, .ecom-product-go-to-checkout-btn:hover {
 	.transition(all, 0.5s, ease);
-	background-color: @font-swatch7-background-color;
+	background-color: @font-swatch7-background-color-hover;
 }
 
 input, .widget.profile form fieldset input, .widget.tweet a, .widget.ecombasket .ecombasket-pull, .widget.paypalbuynow .widget.button.paypal, .widget.clicktocall a, .ecom-product-go-to-checkout-btn, button {
@@ -1211,7 +1219,7 @@ button.blog-search-submit-button, .widget.signupform button, .widget.profile but
 }
 
 .widget.paypalbuynow .widget.button.paypal:hover {
-	background-color: @font-swatch7-background-color;
+	background-color: @font-swatch7-background-color-hover;
 	.border-radius(4px);
 	border: none!important;
 	.transition(all, 0.5s, ease);
@@ -1225,7 +1233,7 @@ textarea {
 
 // #Dropbox
 .widget.dropbox button:hover {
-	background-color: @font-swatch7-background-color;
+	background-color: @font-swatch7-background-color-hover;
 }
 
 .widget {
@@ -1244,6 +1252,9 @@ textarea {
     		font-weight: @font-swatch3-font-weight;
     		line-height: @font-swatch3-line-height;
     		margin: 16px 0 8px;
+    	}
+    	button:hover {
+            	background-color: @font-swatch7-background-color-hover;
     	}
     	fieldset {
     		margin: 0 0 20px 0;

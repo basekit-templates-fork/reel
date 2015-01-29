@@ -1,4 +1,4 @@
-/* 
+/*
 
 1. Imports & Includes
 2. Mixins
@@ -29,10 +29,10 @@
 }
 
 .transition (@prop: all, @time: 0.5s, @ease: ease) {
-	-webkit-transition: @prop @time @ease;  
+	-webkit-transition: @prop @time @ease;
 	-moz-transition:    @prop @time @ease;
-	-ms-transition:     @prop @time @ease; 
-	-o-transition:      @prop @time @ease;  
+	-ms-transition:     @prop @time @ease;
+	-o-transition:      @prop @time @ease;
 	transition: 		@prop @time @ease;
 }
 
@@ -97,14 +97,14 @@
 .widget .extendednavigation a.pull {
 	padding: 11px 9px 0;
 	position: absolute;
-	top: -50px; 
+	top: -50px;
 	width: 42px;
 	height: 38px;
 	overflow: hidden;
 	cursor: pointer;
 	outline: none;
 	.transition( all, 0.5s, ease );
-    &:hover { 
+    &:hover {
     	.transition( all, 0.5s, ease);
     	&:after {
     		background: darken(#c7c7c7, 10%);
@@ -176,7 +176,7 @@
 			}
 			span {
 				color: @color-swatch5;
-				padding: 20px 4px 0 10px; 
+				padding: 20px 4px 0 10px;
 				@media @mobile {
 					padding-right: 10px;
 				}
@@ -581,7 +581,7 @@ div[role="main"] {
             li a {
             	color: @color-swatch1;
             	font-family: @font-swatch7-font-family;
-            	font-size: bkscale(@font-swatch7-font-size, 1.1);	
+            	font-size: bkscale(@font-swatch7-font-size, 1.1);
             	font-weight: @font-swatch7-font-weight;
             	line-height: @font-swatch7-line-height;
             }
@@ -661,7 +661,7 @@ div[role="main"] {
             }
         }
         .menu-section-item-dietary-props .dietary-icon {
-            
+
         }
     }
     .menu-subsection-promoted .menu-items li.menu-item-promoted {
@@ -828,18 +828,13 @@ select {
     width: 100%;
     padding: 0;
 
-  } 
+  }
   .form-group.productlist-search  {
 	label {
 		vertical-align: middle;
 	}
 	input {
 		width: 60%;
-	}
-  	button.btn {
-	    margin-left: 1%;
-		width: 18%;
-	    vertical-align: top;
 	}
   }
 }
@@ -968,7 +963,7 @@ select {
                 max-width: 100%!important;
             }
         }
-        @media (max-width: 650px) { 
+        @media (max-width: 650px) {
             max-width: 100%;
         }
     }
@@ -1042,7 +1037,7 @@ select {
                 outline: none;
             }
         }
-    }   
+    }
     // Table
     table {
         margin: 20px 0 30px;
@@ -1161,7 +1156,7 @@ select {
             }
         }
     }
-    // 
+    //
     .js-shipping-opts {
         border-bottom: 1px solid darken(@color-swatch1,10%);
         padding-bottom: 20px;
@@ -1450,14 +1445,14 @@ hr.line {
 	.clearfix;
 	span {
 		&:first-child {
-			a { 
-				margin-left: 0; 
+			a {
+				margin-left: 0;
 				padding-left: 0;
 			}
 		}
 		&:last-child {
-			a { 
-				margin-right: 0; 
+			a {
+				margin-right: 0;
 				padding-right: 0;
 			}
 		}
@@ -1507,7 +1502,7 @@ hr.line {
 				}
 			}
 			// Text
-			text-indent: inherit;			
+			text-indent: inherit;
 			&:before {
 				display: block;
 				font-family: @font-swatch2-font-family;

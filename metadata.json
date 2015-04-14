@@ -1,7 +1,7 @@
 {
-    "name":"Verbier",
-    "thumbnail":"verbier.png",
-    "screenshot":"verbier.png",
+    "name":"Reel",
+    "thumbnail":"reel.png",
+    "screenshot":"reel.png",
     "templateType":"standard",
     "pageTypes": ["home"],
     "images":[

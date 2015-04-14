@@ -13,13 +13,13 @@
     "colorSwatches":
     {
         "Swatch 1": {
-            "color1":"#ffffff",
-            "color2":"#282828",
-            "color3":"#dd3838",
-            "color4":"#282828",
-            "color5":"#646464",
-            "color6":"#282828",
-            "color7":"#f1f1f1"
+            "color1":"#333333",
+            "color2":"#2385E5",
+            "color3":"#1371CF",
+            "color4":"#ffffff",
+            "color5":"#999999",
+            "color6":"#ffffff",
+            "color7":"#444444"
         },
         "Swatch 2": {
             "color1":"#ffffff",
@@ -61,7 +61,7 @@
     "fontSwatch": {
        "title": "Merriweather",
         "font1": {
-            "font-family": "\"Merriweather\", Georgia, serif",
+            "font-family": "\"Raleway\", \"Lucida Grande\", Helvetica, sans-serif",
             "font-size": "38px",
             "font-weight": "700",
             "line-height": "64px",
@@ -69,7 +69,7 @@
             "letter-spacing": "inherit"
         },
         "font2": {
-            "font-family": "\"Merriweather\", Georgia, serif",
+            "font-family": "\"Raleway\", \"Lucida Grande\", Helvetica, sans-serif",
             "font-size": "30px",
             "font-weight": "700",
             "line-height": "42px",
@@ -77,7 +77,7 @@
             "letter-spacing": "inherit"
         },
         "font3": {
-            "font-family": "\"Merriweather\", Georgia, serif",
+            "font-family": "\"Raleway\", \"Lucida Grande\", Helvetica, sans-serif",
             "font-size": "16px",
             "font-weight": "700",
             "line-height": "30px",
@@ -85,7 +85,7 @@
             "letter-spacing": "inherit"
         },
         "font4": {
-            "font-family": "\"Lato\", Geneva, Tahoma, sans-serif",
+            "font-family": "\"Raleway\", \"Lucida Grande\", Helvetica, sans-serif",
             "font-size": "17px",
             "font-weight": "400",
             "line-height": "26px",
@@ -93,7 +93,7 @@
             "letter-spacing": "inherit"
         },
         "font5": {
-            "font-family": "\"Merriweather\", Georgia, serif",
+            "font-family": "\"Raleway\", \"Lucida Grande\", Helvetica, sans-serif",
             "font-size": "15px",
             "font-weight": "400",
             "line-height": "26px",
@@ -101,7 +101,7 @@
             "letter-spacing": "inherit"
         },
         "font6": {
-            "font-family": "\"Merriweather\", Georgia, serif",
+            "font-family": "\"Raleway\", \"Lucida Grande\", Helvetica, sans-serif",
             "font-size": "16px",
             "font-weight": "400",
             "line-height": "24px",
@@ -112,17 +112,17 @@
             "background-color-hover": "transparent"
         },
         "font7": {
-            "font-family": "\"Lato\", Geneva, Tahoma, sans-serif",
+            "font-family": "\"Raleway\", \"Lucida Grande\", Helvetica, sans-serif",
             "font-size": "15px",
-            "font-weight": "600",
+            "font-weight": "700",
             "line-height": "25px",
-            "color": "@color-swatch1",
+            "color": "@color-swatch4",
             "letter-spacing": "0",
             "background-color": "@color-swatch3",
             "background-color-hover": "lighten(@color-swatch3,10%)"
         },
         "font8": {
-            "font-family": "\"Abril Fatface\", \"Palatino Linotype\", serif",
+            "font-family": "\"Raleway\", \"Lucida Grande\", Helvetica, sans-serif",
             "font-size": "60px",
             "font-weight": "400",
             "line-height": "72px",
@@ -130,7 +130,7 @@
             "letter-spacing": "inherit"
         },
         "font9": {
-            "font-family": "\"Droid Sans\", Helvetica, Arial, sans-serif",
+            "font-family": "\"Raleway\", \"Lucida Grande\", Helvetica, sans-serif",
             "font-size": "16px",
             "font-weight": "400",
             "line-height": "28px",
@@ -138,7 +138,7 @@
             "letter-spacing": "inherit"
         },
         "font10": {
-            "font-family": "\"Merriweather\", Georgia, serif",
+            "font-family": "\"Raleway\", \"Lucida Grande\", Helvetica, sans-serif",
             "font-size": "28px",
             "font-weight": "700",
             "line-height": "36px",

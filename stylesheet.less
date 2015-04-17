@@ -36,6 +36,8 @@
 	transition: 		@prop @time @ease;
 }
 
+
+
 /* 3. Header & Navigation */
 
 .bk-header {
@@ -336,6 +338,7 @@
 				.text {
 					display: inline-block;
 					padding-right: 6px;
+                    max-width: 100%;
 				}
 				&:hover ul {
 				}
@@ -425,6 +428,10 @@
 }
 
 /* 5. Main */
+
+.bk-zone .widget {
+    margin-bottom: 15px;
+}
 
 pre {
 	white-space: normal;
@@ -1264,10 +1271,10 @@ textarea {
     	}
         input, textarea {
             border: 1px solid darken(@color-swatch7, 3%);
-            &.email {
-                @media @mobile {
-                    width: 70%;
-                }
+        }
+        input {
+            @media @mobile {
+                width: 69%;
             }
         }
     }

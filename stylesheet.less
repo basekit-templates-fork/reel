@@ -748,10 +748,8 @@ input[type=search] {
         -moz-border-radius: 0;
         border-radius: 0;
         border: 1px solid darken(@color-swatch1,10%);
-        background-color: darken(@color-swatch1,4%);
         text-indent: 0.01px;
         text-overflow: '';
-        color: darken(@color-swatch5,5%);
         cursor: pointer;
         &:focus {
             outline: 0;
@@ -802,13 +800,13 @@ label {
 }
 
 select {
-  background-color: @color-swatch7;
+  background-color: lighten(@color-swatch7, 50%);
   border: 1px solid darken(@color-swatch7, 3%);
   color: darken(@font-swatch5-color, 50%);
   line-height: 20px;
   font-family: @font-swatch6-font-family;
   font-size: 13px;
-  font-weight: bold;
+  font-weight: 700;
   text-indent: 0;
   width: 100%;
   padding: 14px 10px 10px;

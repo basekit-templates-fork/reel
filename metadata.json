@@ -1,65 +1,69 @@
 {
-    "name":"Reel",
-    "thumbnail":"reel.png",
-    "screenshot":"reel.png",
-    "templateType":"standard",
-    "pageTypes": ["home"],
-    "images":[
+    "name": "Reel",
+    "thumbnail": "reel.png",
+    "screenshot": "reel-screenshot.jpg",
+    "templateType": "standard",
+    "pageTypes": [
+        "home"
+    ],
+    "images": [
         "images/image-1.jpg"
     ],
     "tags": {
-    "en": ["clean", "minimal"]
+        "en": [
+            "clean",
+            "minimal"
+        ]
     },
-    "colorSwatches":
-    {
+    "colorSwatches": {
         "Swatch 1": {
-            "color1":"#222222",
-            "color2":"#d7d7d7",
-            "color3":"#22c7c7",
-            "color4":"#d7d7d7",
-            "color5":"#9b9b9b",
-            "color6":"#d7d7d7",
-            "color7":"#0e0e0e"
+            "color1": "#222222",
+            "color2": "#d7d7d7",
+            "color3": "#22c7c7",
+            "color4": "#d7d7d7",
+            "color5": "#9b9b9b",
+            "color6": "#d7d7d7",
+            "color7": "#0e0e0e"
         },
         "Swatch 2": {
-            "color1":"#222222",
-            "color2":"#cacaca",
-            "color3":"#20bb7c",
-            "color4":"#cacaca",
-            "color5":"#929292",
-            "color6":"#cacaca",
-            "color7":"#0d0d0d"
+            "color1": "#222222",
+            "color2": "#cacaca",
+            "color3": "#20bb7c",
+            "color4": "#cacaca",
+            "color5": "#929292",
+            "color6": "#cacaca",
+            "color7": "#0d0d0d"
         },
         "Swatch 3": {
-            "color1":"#333333",
-            "color2":"#d5d5d5",
-            "color3":"#cf7246",
-            "color4":"#d5d5d5",
-            "color5":"#a8a8a8",
-            "color6":"#d5d5d5",
-            "color7":"#3d3d3d"
+            "color1": "#333333",
+            "color2": "#d5d5d5",
+            "color3": "#cf7246",
+            "color4": "#d5d5d5",
+            "color5": "#a8a8a8",
+            "color6": "#d5d5d5",
+            "color7": "#3d3d3d"
         },
         "Swatch 4": {
-            "color1":"#2f2f2f",
-            "color2":"#c4c4c4",
-            "color3":"#7640be",
-            "color4":"#c4c4c4",
-            "color5":"#9b9b9b",
-            "color6":"#c4c4c4",
-            "color7":"#383838"
+            "color1": "#2f2f2f",
+            "color2": "#c4c4c4",
+            "color3": "#7640be",
+            "color4": "#c4c4c4",
+            "color5": "#9b9b9b",
+            "color6": "#c4c4c4",
+            "color7": "#383838"
         },
         "Swatch 5": {
-            "color1":"#222222",
-            "color2":"#d9d9d9",
-            "color3":"#0d5cd0",
-            "color4":"#d9d9d9",
-            "color5":"#9a9a9a",
-            "color6":"#d9d9d9",
-            "color7":"#000000"
+            "color1": "#222222",
+            "color2": "#d9d9d9",
+            "color3": "#0d5cd0",
+            "color4": "#d9d9d9",
+            "color5": "#9a9a9a",
+            "color6": "#d9d9d9",
+            "color7": "#000000"
         }
     },
     "fontSwatch": {
-       "title": "Merriweather",
+        "title": "Merriweather",
         "font1": {
             "font-family": "\"Raleway\", \"Lucida Grande\", Helvetica, sans-serif",
             "font-size": "38px",
